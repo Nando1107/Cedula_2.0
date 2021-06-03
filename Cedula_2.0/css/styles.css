@@ -11,7 +11,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background:url(../img/background.jpg) no-repeat center top;
+	background:rgb(200,200,200);
 	background-size: cover;
 	font-family: sans-serif;
 	height: 100vh;
@@ -23,10 +23,10 @@ body {
 
 .tapa .Barra{
 	position: fixed;
-	width: 290px;
+	width: 20%;
 	height: 100%;
-	background: #fd7e14;
-	padding: 15px 0;	
+	background:#b6985e;
+	padding: 15px;	
 }
 
 .tapa .Barra h2 {
@@ -38,14 +38,14 @@ body {
 }
 
 .tapa .Barra ul li{
-	padding: 20px;
+	padding: 7%;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 	border-top: 1px solid rgba(225,225,225,0.05);
 
 }
 
 .tapa .Barra ul li a{
-	color: #023d0e;
+	color: white;
 	display: block;
 }
 
@@ -58,16 +58,16 @@ body {
 }
 
 .tapa .Barra ul li:hover {
-	background-color: #fff;
+	background-color:rgb(200,200,200);
 }
 
 .tapa .Barra ul li:hover a {
-	color: #ff0008;
+	color:#293e6b;
 }
 
 .tapa .contenido{
 	width: 100%;
-	margin-left: 270px;
+	margin-left: 20%;
 
 }
 
@@ -76,21 +76,21 @@ body {
 	border: 2px;
 }
 
-.tapa .contenido li{
+.tapa .contenido .navbar li{
 	float: left;
-	padding: 15px;
+	padding: 1%;
 	list-style: none;
 }
 
-.tapa .contenido a{
+.tapa .contenido .navbar a{
 	text-decoration: none;
 	font-family: 'Kanit', sans-serif;
-	color: #023d0e;
+	color:white;
 	font-size: 20px;
 }
 
-.tapa .contenido ul li:hover a {
-	color: #ff0008;
+.tapa .contenido .navbar ul li:hover a {
+	color: #b6985e;
 }
 
 h1{
@@ -110,4 +110,15 @@ h3{
 	text-decoration: none;
 	font-family: 'Kanit', sans-serif;
 	color: #023d0e;
+}
+
+.navbar{
+	position: absolute;
+	display: block;
+	background-color: #293e6b;
+	width: 80%;
+}
+.tapa .formularios{
+	width: 100%;
+	background-color: #023d0e;
 }
