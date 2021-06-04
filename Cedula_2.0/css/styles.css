@@ -26,7 +26,7 @@ body {
 	width: 20%;
 	height: 100%;
 	background:#b6985e;
-	padding: 15px;	
+	padding: 1%;	
 }
 
 .tapa .Barra h2 {
@@ -47,6 +47,7 @@ body {
 .tapa .Barra ul li a{
 	color: white;
 	display: block;
+	text-decoration: none;
 }
 
 .tapa .Barra ul li a .fas {
@@ -65,20 +66,19 @@ body {
 	color:#293e6b;
 }
 
-.tapa .contenido{
-	width: 100%;
-	margin-left: 20%;
-
-}
-
 .tapa .contenido {
 	color: #717171;
-	border: 2px;
+	display: inline-block;
+	padding-top: 0%;
+	margin-left: 20%;
+	width: 100%;
+	margin-left: 20%;
+	padding:0% 0% 0% 0%;
 }
 
 .tapa .contenido .navbar li{
 	float: left;
-	padding: 1%;
+	padding: 1.5% 0% 1% 3%;
 	list-style: none;
 }
 
@@ -106,7 +106,7 @@ h3{
 
 .row-md-6 {
 	float: right;
-	padding: 5px;
+	padding: 1.3% 3% 0% 0%;
 	text-decoration: none;
 	font-family: 'Kanit', sans-serif;
 	color: #023d0e;
@@ -117,8 +117,40 @@ h3{
 	display: block;
 	background-color: #293e6b;
 	width: 80%;
+	padding:0% 2% 1%;
 }
 .tapa .formularios{
 	width: 100%;
-	background-color: #023d0e;
+	padding:10% 5%;
+}
+
+#save{
+	margin:0% 45%;
+}
+
+.unam{
+	display: inline;
+	float: right;
+	width: 7%;
+	padding: 1% 0% 0% 0%;
+}
+
+.fesa{
+	display: inline;
+	float:left;
+	width: 7%;
+	padding: 1% 0% 0% 0%;
+}
+
+.unam img{
+	width: 100%;
+}
+
+.fesa img{
+	width: 100%;
+}
+
+.titulo{
+	display: inline;
+	float: left;
 }
