@@ -14,7 +14,7 @@ body {
 	background:rgb(200,200,200);
 	background-size: cover;
 	font-family: sans-serif;
-	height: 100vh;
+	height: 100%;
 }
 .tapa{
 	display: flex;
@@ -33,14 +33,14 @@ body {
 	color: #fff;
 	text-transform: uppercase;
 	text-align: center;
-	margin-bottom: 10px;
-
+	margin-bottom: 1%;
+	font-size: 200%;
 }
 
 .tapa .Barra ul li{
-	padding: 7%;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
-	border-top: 1px solid rgba(225,225,225,0.05);
+	padding: 7% 3% 7% 4%;
+	border-bottom: 0.1% solid rgba(0,0,0,0.05);
+	border-top: 0.1% solid rgba(225,225,225,0.05);
 
 }
 
@@ -48,14 +48,15 @@ body {
 	color: white;
 	display: block;
 	text-decoration: none;
+	font-size: 100%;
 }
 
 .tapa .Barra ul li a .fas {
-	width: 20px;
+	width: 10%;
 }
 
 .tapa .Barra ul li a .far {
-	width: 20px;
+	width: 10%;
 }
 
 .tapa .Barra ul li:hover {
@@ -86,7 +87,7 @@ body {
 	text-decoration: none;
 	font-family: 'Kanit', sans-serif;
 	color:white;
-	font-size: 20px;
+	font-size: 120%;
 }
 
 .tapa .contenido .navbar ul li:hover a {
@@ -95,13 +96,13 @@ body {
 
 h1{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 3%;
+    margin-bottom: 1%;
 }
 
 h3{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1%;
 }
 
 .row-md-6 {
@@ -110,6 +111,7 @@ h3{
 	text-decoration: none;
 	font-family: 'Kanit', sans-serif;
 	color: #023d0e;
+	font-size: 120%;
 }
 
 .navbar{
