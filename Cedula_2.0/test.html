@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<script>
+a = 0;
+function addRow(){
+        a++;
+
+        var div = document.createElement('div');
+        div.setAttribute('class', 'form-inline');
+            div.innerHTML = '<div style="clear:both" class="organismo_'+a+' col-md-3"><input class="form-control" name="organismo_'+a+'" type="text"/></div><div class="organismo_'+a+' col-md-3""><input class="form-control" name="anios_'+a+'" type="text"/></div><div class="organismo_'+a+' col-md-3""><select id="niv_part" class="form-select"><option selected>Seleccionar...</option><option>Amplio</option><option>Suficiente</option><option>Regular</option><option>Poco</option></select></div>';
+            document.getElementById('memb_part').appendChild(div);document.getElementById('cmemb_part').appendChild(div);
+}
+</script>
+
+
+</head>
+
+<body>
+<div class="container">
+    <h3>Test dinámico</h3>
+    <form action="formulario2.html" id="formulario" method="get">    
+    <div class="row">
+        <div class="col-md-3"><label>Organismo/Membres&iacute;a</label></div>
+        <div class="col-md-3"><label>A&ntilde;os Mebres&iacute;a</label></div>
+        <div class="col-md-3"><label>Nivel Participaci&oacute;n</label></div>
+        <div class="col-md-1"><input type="button" class="btn btn-success" id="add_Row()" onClick="addRow()" value="+" /></div>
+    </div>
+    <!-- El id="memb_part" indica que la función de JavaScript dejará aquí el resultado -->
+    <div class="row" id="memb_part">
+    </div>
+    <div class="row-md-4">            
+        <button type="button" id="save" class="btn btn-outline-dark btn-block">Guardar</button>             
+          </div>
+    </form>
+</div>
+
+</body>
+</html>		
