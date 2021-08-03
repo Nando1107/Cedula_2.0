@@ -34,11 +34,11 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 1%;
-	font-size: 200%;
+	font-size: 220%;
 }
 
 .tapa .Barra ul li{
-	padding: 1.5% 10% 1.5% 3%;
+	padding: 1.5% 0% 1.5% 0%;
 	border-bottom: 0.1% solid rgba(0,0,0,0.05);
 	border-top: 0.1% solid rgba(225,225,225,0.05);
 
@@ -48,7 +48,7 @@ body {
 	color: white;
 	display: block;
 	text-decoration: none;
-	font-size: 100%;
+	font-size: 120%;
 }
 
 .tapa .Barra ul li a .fas {
@@ -79,7 +79,7 @@ body {
 
 .tapa .contenido .navbar li{
 	float: left;
-	padding: 1.5% 0% 1% 3%;
+	padding: 2% 0% 1% 3%;
 	list-style: none;
 }
 
@@ -87,7 +87,7 @@ body {
 	text-decoration: none;
 	font-family: 'Kanit', sans-serif;
 	color:white;
-	font-size: 120%;
+	font-size: 150%;
 }
 
 .tapa .contenido .navbar ul li:hover a {
@@ -103,15 +103,16 @@ h1{
 h3{
     text-align: center;
     margin-bottom: 1%;
+	font-size: 200%;
 }
 
 .row-md-6 {
 	float: right;
-	padding: 1.3% 3% 0% 0%;
+	padding: 1.8% 3% 0% 0%;
 	text-decoration: none;
 	font-family: 'Kanit', sans-serif;
 	color: #023d0e;
-	font-size: 120%;
+	font-size: 100%;
 }
 
 .navbar{
@@ -127,7 +128,7 @@ h3{
 }
 
 #save{
-	margin:0% 45%;
+	margin:0% ; 
 }
 
 .unam{
@@ -155,4 +156,8 @@ h3{
 .titulo{
 	display: inline;
 	float: left;
+}
+
+p{
+	font-size: 130%;
 }

@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Capacitación Docente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
   </head>
 	<body>
@@ -14,20 +16,20 @@
 			<div class="Barra">
 				<h2>Formularios Cédula 0</h2>
         <hr>
-            <ul>
-                <li><a href="dat_pers.html"><i class="fas fa-file-alt"></i>Datos Personales</a></li>
-                <li><a href="form_acad.html"><i class="far fa-file-alt"></i>Formación Académica</a></li>
-                <li><a href="cap_doc.html"><i class="fas fa-file-alt"></i>Capacitación Docente</a></li>
-                <li><a href="act_disc.html"><i class="far fa-file-alt"></i>Actualización Disciplinar</a></li>
-                <li><a href="gest_acad.html"><i class="fas fa-file-alt"></i>Gestión Académica</a></li>
-                <li><a href="prod_acad.html"><i class="far fa-file-alt"></i>Productos Académicos</a></li>
-                <li><a href="exp_prof.html"><i class="fas fa-file-alt"></i>Experiencia Profesional</a></li>
-                <li><a href="exp_di.html"><i class="far fa-file-alt"></i>Experiencia en Diseño Ingenieril</a></li>
-                <li><a href="logros.html"><i class="far fa-file-alt"></i>Logros Profesionales</a></li>
-                <li><a href="memb_part.html"><i class="far fa-file-alt"></i>Membresías o Participaciones</a></li>
-                <li><a href="#"><i class="far fa-file-alt"></i>Premios, distinciones o reconocimientos</a></li>
-                <li><a href="#"><i class="far fa-file-alt"></i>Participación o actualizacion en PE</a></li>
-            </ul>
+        <ul>
+          <li><a href="dat_pers.html"><i class="glyphicon glyphicon-user"></i>  Datos Personales</a></li>
+          <li><a href="form_acad.html"><i class="glyphicon glyphicon-pencil"></i>  Formación Académica</a></li>
+          <li><a href="cap_doc.html"><i class="glyphicon glyphicon-ok"></i>  Capacitación Docente</a></li>
+          <li><a href="act_disc.html"><i class="glyphicon glyphicon-refresh"></i>  Actualización Disciplinar</a></li>
+          <li><a href="gest_acad.html"><i class="glyphicon glyphicon-star"></i>  Gestión Académica</a></li>
+          <li><a href="prod_acad.html"><i class="glyphicon glyphicon-shopping-cart"></i>  Productos Académicos</a></li>
+          <li><a href="exp_prof.html"><i class="glyphicon glyphicon-book"></i>  Experiencia Profesional</a></li>
+          <li><a href="exp_di.html"><i class="glyphicon glyphicon-eye-open"></i>  Experiencia en Diseño Ingenieril</a></li>
+          <li><a href="logros.html"><i class="glyphicon glyphicon-export"></i>  Logros Profesionales</a></li>
+          <li><a href="memb_part.html"><i class="glyphicon glyphicon-credit-card"></i>  Membresías o Participaciones</a></li>
+          <li><a href="#"><i class="glyphicon glyphicon-gift"></i>  Premios, distinciones o reconocimientos</a></li>
+          <li><a href="#"><i class="glyphicon glyphicon-wrench"></i>  Participación o actualizacion en PE</a></li>
+        </ul>
         <hr>
 			</div>
 			<div class="contenido">
@@ -44,109 +46,108 @@
               <li><a href="#"></i>Visualizar datos</a></li>
             </ul>
             <div class="row-md-6">
-              <button type="button" class="btn btn-outline-light btn-block">Cerrar Sesión</button>
+              <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
             </div>
           </nav>
         </div>
-	<div class="formularios">
+
+
+        <div class="formularios">
           <br>
           <h3>Capacitación Docente</h3>
-          <br>
-
-          <form class="row g-0">
-            <div class="row">                
-                <form class="row g-3">                   
-                  <div class="col-md-4">
-                    <label for="Tipo_cap" class="form-label">Tipo de Capacitación</label>
-                    <input type="text" class="form-control" id="tipo_capacitacion">
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inst_pais_capacitacion" class="form-label">Institución y País</label>
-                    <input type="text" class="form-control" id="inst_pais_capacitacion">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="fecha_cap" class="form-label">Año de Obtención</label>
-                    <input type="int" class="form-control" id="fecha_cap">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="horas" class="form-label">Horas</label>
-                    <input type="int" class="form-control" id="horas">
-                  </div>
+          <hr>
+          <div class="col-md-12" id="container2">
+            <div id="type_container">
+              <div class="row form-group" id="edit-0">
+                <div class="col-md-4">
+                  <label for="Tipo_cap" class="form-label">Tipo de Capacitación</label>
+                  <input type="text" class="form-control" id="tipo_capacitacion">
+                </div>
+                <div class="col-md-4">
+                  <label for="inst_pais_capacitacion" class="form-label">Institución y País</label>
+                  <input type="text" class="form-control" id="inst_pais_capacitacion">
+                </div>
+                <div class="col-md-2">
+                  <label for="fecha_cap" class="form-label">Año de Obtención</label>
+                  <input type="int" class="form-control" id="fecha_cap">
+                </div>
+                <div class="col-md-2">
+                  <label for="horas" class="form-label">Horas</label>
+                  <input type="int" class="form-control" id="horas">
+                </div>
+                <div class="col-md-12">
                   <br>
-                  <div class="row-md-3">                   
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#agregarOtro1" role="button" aria-expanded="false" aria-controls="agregarOtro2">Agregar Otra</a>
-                  </div>   
-          </form>
-          </div>
-
-
-          <div class="collapse multi-collapse" id="agregarOtro1">
-         <br>
-         <form class="row g-0">
-            <div class="row">                
-                <form class="row g-3">                   
-                  <div class="col-md-4">
-                    <label for="Tipo_cap" class="form-label">Tipo de Capacitación</label>
-                    <input type="text" class="form-control" id="tipo_capacitacion">
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inst_pais_capacitacion" class="form-label">Institución y País</label>
-                    <input type="text" class="form-control" id="inst_pais_capacitacion">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="fecha_cap" class="form-label">Año de Obtención</label>
-                    <input type="int" class="form-control" id="fecha_cap">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="horas" class="form-label">Horas</label>
-                    <input type="int" class="form-control" id="horas">
-                  </div>
-                  <br>
-                  <div class="row-md-3">                   
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#agregarOtro2" role="button" aria-expanded="false" aria-controls="agregarOtro2">Agregar Otra</a>
-                  </div>   
-          </form>
-          </div>
-
-         
-          
-          <div class="collapse multi-collapse" id="agregarOtro2">
-            <br>
-            <form class="row g-0">
-                <div class="row">                
-                    <form class="row g-3">                   
-                      <div class="col-md-4">
-                        <label for="Tipo_cap" class="form-label">Tipo de Capacitación</label>
-                        <input type="text" class="form-control" id="tipo_capacitacion">
-                      </div>
-                      <div class="col-md-4">
-                        <label for="inst_pais_capacitacion" class="form-label">Institución y País</label>
-                        <input type="text" class="form-control" id="inst_pais_capacitacion">
-                      </div>
-                      <div class="col-md-2">
-                        <label for="fecha_cap" class="form-label">Año de Obtención</label>
-                        <input type="int" class="form-control" id="fecha_cap">
-                      </div>
-                      <div class="col-md-2">
-                        <label for="horas" class="form-label">Horas</label>
-                        <input type="int" class="form-control" id="horas">
-                      </div>
-                      <br>
-                      <div class="row-md-3">                   
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#agregarOtro2" role="button" aria-expanded="false" aria-controls="agregarOtro2">Cancelar</a>
-                      </div>   
-              </form>
+                  <a class="add-type pull-right" href="javascript: void(0)" title="Click para agregar un nuevo campo">
+                    <button type="button" class="btn btn-info">Agregar otro</button>
+                  </a>
+                </div>
+              </div> 
             </div>
-        </form>
+            <div id="type-container" class="hide">
+              <div class="row form-group type-row" id="">
+                <div class="col-md-4">
+                  <label for="Tipo_cap" class="form-label">Tipo de Capacitación</label>
+                  <input type="text" class="form-control" id="tipo_capacitacion">
+                </div>
+                <div class="col-md-4">
+                  <label for="inst_pais_capacitacion" class="form-label">Institución y País</label>
+                  <input type="text" class="form-control" id="inst_pais_capacitacion">
+                </div>
+                <div class="col-md-2">
+                  <label for="fecha_cap" class="form-label">Año de Obtención</label>
+                  <input type="int" class="form-control" id="fecha_cap">
+                </div>
+                <div class="col-md-2">
+                  <label for="horas" class="form-label">Horas</label>
+                  <input type="int" class="form-control" id="horas">
+                </div> 
+                <div class="col-md-12">
+                  <br>
+                  <a class="remove-type pull-right" targetDiv="" data-id="0" href="javascript: void(0)">
+                    <button type="button" class="btn btn-danger">Borrar</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <hr>
           </div>
-         </form>
+          <div class="col text-center">
+            <button type="button" class="btn btn-success">Guardar</button>
           </div>
-            <br>
-              <div class="row-md-3">            
-             <button type="button" id="save" class="btn btn-outline-dark btn-block">Guardar</button>             
-               </div>
-              
+          <script>
+              jQuery(document).ready(function () {
+                  var doc = $(document);
+                  jQuery('a.add-type').die('click').live('click', function (e) {
+                      e.preventDefault();
+                      var content = jQuery('#type-container .type-row'),
+                          element = null;
+                      for (var i = 0; i < 1; i++) {
+                          element = content.clone();
+                          var type_div = 'teams_' + jQuery.now();
+                          element.attr('id', type_div);
+                          element.find('.remove-type').attr('targetDiv', type_div);
+                          element.appendTo('#type_container');
+                      }
+                  });
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+                  jQuery(".remove-type").die('click').live('click', function (e) {
+                      var didConfirm = confirm("¿Estás seguro que quieres eliminar la fila?");
+                      if (didConfirm == true) {
+                          var id = jQuery(this).attr('data-id');
+                          var targetDiv = jQuery(this).attr('targetDiv');
+                          //if (id == 0) {
+                          //var trID = jQuery(this).parents("tr").attr('id');
+                          jQuery('#' + targetDiv).remove();
+                          // }
+                          return true;
+                      } else {
+                          return false;
+                      }
+                  });
+              });
+          </script>
+        </div>
+      </div>  
+    </div>
 	</body>
 </html>
