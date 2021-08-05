@@ -104,6 +104,8 @@ h3{
     text-align: center;
     margin-bottom: 1%;
 	font-size: 200%;
+	font-weight: bolder;
+	color:#293e6b;
 }
 
 .row-md-6 {
@@ -160,4 +162,9 @@ h3{
 
 p{
 	font-size: 130%;
+	font-weight: bolder;
+}
+
+label{
+	color: black;
 }
