@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia Profesional</title>
+    <title>Productos Académicos</title>
     <link rel="shortcut icon" href="C:\xampp\htdocs\Cedula_2.0\Cedula_2.0\img\iconofes.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -18,18 +18,18 @@
         <h2>Formularios Cédula 0</h2>
         <hr>
           <ul>
-            <li><a href="dat_pers.html"><i class="glyphicon glyphicon-user"></i>  Datos Personales</a></li>
-            <li><a href="form_acad.html"><i class="glyphicon glyphicon-pencil"></i>  Formación Académica</a></li>
-            <li><a href="cap_doc.html"><i class="glyphicon glyphicon-ok"></i>  Capacitación Docente</a></li>
-            <li><a href="act_disc.html"><i class="glyphicon glyphicon-refresh"></i>  Actualización Disciplinar</a></li>
-            <li><a href="gest_acad.html"><i class="glyphicon glyphicon-star"></i>  Gestión Académica</a></li>
-            <li><a href="prod_acad.html"><i class="glyphicon glyphicon-shopping-cart"></i>  Productos Académicos</a></li>
-            <li><a href="exp_prof.html"><i class="glyphicon glyphicon-book"></i>  Experiencia Profesional</a></li>
-            <li><a href="exp_di.html"><i class="glyphicon glyphicon-eye-open"></i>  Experiencia en Diseño Ingenieril</a></li>
-            <li><a href="logros.html"><i class="glyphicon glyphicon-export"></i>  Logros Profesionales</a></li>
-            <li><a href="memb_part.html"><i class="glyphicon glyphicon-credit-card"></i>  Membresías o Participaciones</a></li>
-            <li><a href="prem_dist.html"><i class="glyphicon glyphicon-gift"></i>  Premios, distinciones o reconocimientos</a></li>
-            <li><a href="part_act.html"><i class="glyphicon glyphicon-wrench"></i>  Participación o actualizacion en PE</a></li>
+            <li><a href="dat_pers.php"><i class="glyphicon glyphicon-user"></i>  Datos Personales</a></li>
+            <li><a href="form_acad.php"><i class="glyphicon glyphicon-pencil"></i>  Formación Académica</a></li>
+            <li><a href="cap_doc.php"><i class="glyphicon glyphicon-ok"></i>  Capacitación Docente</a></li>
+            <li><a href="act_disc.php"><i class="glyphicon glyphicon-refresh"></i>  Actualización Disciplinar</a></li>
+            <li><a href="gest_acad.php"><i class="glyphicon glyphicon-star"></i>  Gestión Académica</a></li>
+            <li><a href="prod_acad.php"><i class="glyphicon glyphicon-shopping-cart"></i>  Productos Académicos</a></li>
+            <li><a href="exp_prof.php"><i class="glyphicon glyphicon-book"></i>  Experiencia Profesional</a></li>
+            <li><a href="exp_di.php"><i class="glyphicon glyphicon-eye-open"></i>  Experiencia en Diseño Ingenieril</a></li>
+            <li><a href="logros.php"><i class="glyphicon glyphicon-export"></i>  Logros Profesionales</a></li>
+            <li><a href="memb_part.php"><i class="glyphicon glyphicon-credit-card"></i>  Membresías o Participaciones</a></li>
+            <li><a href="prem_dist.php"><i class="glyphicon glyphicon-gift"></i>  Premios, distinciones o reconocimientos</a></li>
+            <li><a href="part_act.php"><i class="glyphicon glyphicon-wrench"></i>  Participación o actualizacion en PE</a></li>
           </ul>
         <hr>
       </div>
@@ -43,7 +43,7 @@
           </div>
           <nav>
             <ul>
-              <li><a href="index.html"></i>Inicio</a></li>
+              <li><a href="index.php"></i>Inicio</a></li>
               <li><a href="#"></i>Visualizar datos</a></li>
             </ul>
             <div class="row-md-6">
@@ -53,29 +53,23 @@
         </div>
         <div class="formularios">
           <br>
-          <h3>Experiencia Profesional</h3>
-          <p>Anotar las actividades o puestos desempeñados en orden cronológico decreciente: 
-            primero la más reciente (o actual) y de último la más antigüa.
+          <h3>Productos Académicos</h3>
+          <p>
+            Incluir los datos relevantes, tales como: para publicaciones titulo, autor(es), 
+            dónde se publicó o presentó, fecha de publicación o presentación, etc.; 
+            para patentes o desarrollos tecnológicos, tipo, número de registro, alcance, etc. 
           </p>
           <hr>
           <div class="col-md-12" id="container2">
             <div id="type_container">
               <div class="row form-group" id="edit-0">
-                <div class="col-md-4">
-                  <label for="act_puesto" class="form-label">Actividad ó Puesto</label>
-                  <input type="text" class="form-control" id="act_puesto">
-                </div>
-                <div class="col-md-4">
-                  <label for="organizacion_exp" class="form-label">Organización ó Empresa</label>
-                  <input type="text" class="form-control" id="organizacion_exp">
-                </div>
                 <div class="col-md-2">
-                  <label for="inicio_de" class="form-label">De: (Mes y año)</label>
-                  <input type="month" name="fecha" id="inicio_de" class="form-control" value="yyyy-mm">                    
+                  <label for="numero_producto" class="form-label">Núm.</label>
+                  <input type="text" class="form-control" id="numero_producto">
                 </div>
-                <div class="col-md-2">
-                  <label for="fin_de" class="form-label">A: (Mes y año)</label>
-                  <input type="month" name="fecha" id="fin_de" class="form-control" value="yyyy-mm">
+                <div class="col-md-10">
+                  <label for="descripcion_producto" class="form-label">Descripción del Producto Académico</label>
+                  <input type="text" class="form-control" id="descripcion_producto">
                 </div>
                 <div class="col-md-12">
                   <br>
@@ -87,21 +81,13 @@
             </div>
             <div id="type-container" class="hide">
               <div class="row form-group type-row" id="">
-                <div class="col-md-4">
-                  <label for="act_puesto" class="form-label">Actividad ó Puesto</label>
-                  <input type="text" class="form-control" id="act_puesto">
-                </div>
-                <div class="col-md-4">
-                  <label for="organizacion_exp" class="form-label">Organización ó Empresa</label>
-                  <input type="text" class="form-control" id="organizacion_exp">
-                </div>
                 <div class="col-md-2">
-                  <label for="inicio_de" class="form-label">De: (Mes y año)</label>
-                  <input type="month" name="fecha" id="inicio_de" class="form-control" value="yyyy-mm">                    
+                  <label for="numero_producto" class="form-label">Núm.</label>
+                  <input type="text" class="form-control" id="numero_producto">
                 </div>
-                <div class="col-md-2">
-                  <label for="fin_de" class="form-label">A: (Mes y año)</label>
-                  <input type="month" name="fecha" id="fin_de" class="form-control" value="yyyy-mm">
+                <div class="col-md-10">
+                  <label for="descripcion_producto" class="form-label">Descripción del Producto Académico</label>
+                  <input type="text" class="form-control" id="descripcion_producto">
                 </div>
                 <div class="col-md-12">
                   <br>

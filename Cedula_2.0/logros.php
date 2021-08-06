@@ -18,18 +18,18 @@
         <h2>Formularios Cédula 0</h2>
         <hr>
           <ul>
-            <li><a href="dat_pers.html"><i class="glyphicon glyphicon-user"></i>  Datos Personales</a></li>
-            <li><a href="form_acad.html"><i class="glyphicon glyphicon-pencil"></i>  Formación Académica</a></li>
-            <li><a href="cap_doc.html"><i class="glyphicon glyphicon-ok"></i>  Capacitación Docente</a></li>
-            <li><a href="act_disc.html"><i class="glyphicon glyphicon-refresh"></i>  Actualización Disciplinar</a></li>
-            <li><a href="gest_acad.html"><i class="glyphicon glyphicon-star"></i>  Gestión Académica</a></li>
-            <li><a href="prod_acad.html"><i class="glyphicon glyphicon-shopping-cart"></i>  Productos Académicos</a></li>
-            <li><a href="exp_prof.html"><i class="glyphicon glyphicon-book"></i>  Experiencia Profesional</a></li>
-            <li><a href="exp_di.html"><i class="glyphicon glyphicon-eye-open"></i>  Experiencia en Diseño Ingenieril</a></li>
-            <li><a href="logros.html"><i class="glyphicon glyphicon-export"></i>  Logros Profesionales</a></li>
-            <li><a href="memb_part.html"><i class="glyphicon glyphicon-credit-card"></i>  Membresías o Participaciones</a></li>
-            <li><a href="prem_dist.html"><i class="glyphicon glyphicon-gift"></i>  Premios, distinciones o reconocimientos</a></li>
-            <li><a href="part_act.html"><i class="glyphicon glyphicon-wrench"></i>  Participación o actualizacion en PE</a></li>
+            <li><a href="dat_pers.php"><i class="glyphicon glyphicon-user"></i>  Datos Personales</a></li>
+            <li><a href="form_acad.php"><i class="glyphicon glyphicon-pencil"></i>  Formación Académica</a></li>
+            <li><a href="cap_doc.php"><i class="glyphicon glyphicon-ok"></i>  Capacitación Docente</a></li>
+            <li><a href="act_disc.php"><i class="glyphicon glyphicon-refresh"></i>  Actualización Disciplinar</a></li>
+            <li><a href="gest_acad.php"><i class="glyphicon glyphicon-star"></i>  Gestión Académica</a></li>
+            <li><a href="prod_acad.php"><i class="glyphicon glyphicon-shopping-cart"></i>  Productos Académicos</a></li>
+            <li><a href="exp_prof.php"><i class="glyphicon glyphicon-book"></i>  Experiencia Profesional</a></li>
+            <li><a href="exp_di.php"><i class="glyphicon glyphicon-eye-open"></i>  Experiencia en Diseño Ingenieril</a></li>
+            <li><a href="logros.php"><i class="glyphicon glyphicon-export"></i>  Logros Profesionales</a></li>
+            <li><a href="memb_part.php"><i class="glyphicon glyphicon-credit-card"></i>  Membresías o Participaciones</a></li>
+            <li><a href="prem_dist.php"><i class="glyphicon glyphicon-gift"></i>  Premios, distinciones o reconocimientos</a></li>
+            <li><a href="part_act.php"><i class="glyphicon glyphicon-wrench"></i>  Participación o actualizacion en PE</a></li>
           </ul>
         <hr>
       </div>
@@ -43,7 +43,7 @@
           </div>
           <nav>
             <ul>
-              <li><a href="index.html"></i>Inicio</a></li>
+              <li><a href="index.php"></i>Inicio</a></li>
               <li><a href="#"></i>Visualizar datos</a></li>
             </ul>
             <div class="row-md-6">

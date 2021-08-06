@@ -24,7 +24,7 @@ function addRow(){
     <body>
         <div class="container">
             <h3>Test dinámico</h3>
-            <form action="formulario2.html" id="formulario" method="get">    
+            <form action="formulario2.php" id="formulario" method="get">    
             <div class="row">
                 <div class="col-md-3"><label>Organismo/Membres&iacute;a</label></div>
                 <div class="col-md-3"><label>A&ntilde;os Mebres&iacute;a</label></div>
