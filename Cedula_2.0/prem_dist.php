@@ -53,7 +53,7 @@
         </div>
         <div class="formularios">
           <br>
-          <h3>Premios o Distinciones</h3>
+          <h3>Premios, distinciones o reconocimientos recibidos.</h3>
           <p>Incluir los datos relevantes, nombre del premio, organismo que lo otorga, motivos por los que se otorga, etc. 
           </p>
           <hr>
