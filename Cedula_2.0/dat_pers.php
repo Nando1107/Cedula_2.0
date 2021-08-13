@@ -1,3 +1,58 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * from datos_profesor where id_profesor= 2';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['apellido_pat'].'<td>
+    <tr>';
+    $apellido_pat = $row['apellido_pat']; 
+
+    echo ' <tr>
+    <td>'.$row['apellido_mat'].'<td>
+    <tr>';
+    $apellido_mat = $row['apellido_mat'];    
+    
+    echo ' <tr>
+    <td>'.$row['nombre'].'<td>
+    <tr>';
+    $nombre = $row['nombre'];
+    
+    echo ' <tr>
+    <td>'.$row['edad'].'<td>
+    <tr>';
+    $edad = $row['edad'];
+
+    echo ' <tr>
+    <td>'.$row['fecha_nac'].'<td>
+    <tr>';
+    $fecha_nac = $row['fecha_nac'];
+
+    echo ' <tr>
+    <td>'.$row['puesto_institucion'].'<td>
+    <tr>';
+    $puesto_institucion = $row['puesto_institucion'];  
+    }   
+	mysqli_close($conn);
+?> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,24 +121,32 @@
           <form class="row g-0">
             <div class="col-md-4">
               <label for="apellido_pat" class="form-label">Apellido Paterno</label>
-              <input type="text" class="form-control" id="apellido_pat">
+              <input type="text" class="form-control" value="<?php echo $apellido_pat;?>" id="apellido_pat">  
+              
+        
+<!-- <label>Nombre:</label> <input id="nombre" type="text" name="nombre" value="<?php echo $nombre;?>"> -->
+
+
+
+
+
             </div>
             <div class="col-md-4">
               <label for="apellido_mat" class="form-label">Apellido Materno</label>
-              <input type="text" class="form-control" id="apellido_mat">
+              <input type="text" class="form-control" value="<?php echo $apellido_mat;?>" id="apellido_mat"  >
             </div>
             <div class="col-md-4">
               <label for="nombre" class="form-label">Nombre(s)</label>
-              <input type="text" class="form-control" id="nombre">
+              <input type="text" class="form-control" id="nombre" value="<?php echo $nombre;?>">
             </div>
             <div class="col-md-12"><br></div>
             <div class="col-md-3">
               <label for="edad" class="form-label">Edad</label>
-              <input type="" readonly class="form-control" id="edad" name="edad"> <!--Hacer comparacion con fecha de nac para que no sea una entrada y se ponga en automatico-->
+              <input type="" readonly class="form-control" id="edad" name="edad" value="<?php echo $edad;?>"> <!--Hacer comparacion con fecha de nac para que no sea una entrada y se ponga en automatico-->
             </div>
             <div class="col-md-5">
               <label for="fecha_nac" class="form-label">Fecha de Nacimiento</label>
-              <input type="date" class="form-control" id="fecha_nac" name="fecha_nac">
+              <input type="date" class="form-control" id="fecha_nac" name="fecha_nac" value="<?php echo $fecha_nac;?>">
             </div>
             <div class="col-md-4">
               <label for="puesto_institucion" class="form-label">Puesto en la Institución</label>
@@ -94,12 +157,14 @@
                 <option>PPH</option>
                 <option>PDA</option>
                 <option>OTR</option>
+                <option selected><?php echo $puesto_institucion;?></option>
               </select>
             </div>
           </form>
           <hr>
           <div class="col text-center">
             <button type="button" class="btn btn-success">Guardar</button>
+            <?php isset($_POST["nombre"]) ? print $_POST["nombre"] : ""; ?>
           </div>
 				</div>
 			</div>
@@ -123,5 +188,6 @@
           $('#edad').val(edad);
       }
     </script>
+  
 </body>
 </html>

@@ -34,7 +34,7 @@
 
 		<input type="submit" value="Terminar Registro">
 
-		<p>¿Ya tienes una cuenta? <a class="link" href="index.php">Inicia Sesión </a></p>
+		<p>¿Ya tienes una cuenta? <a class="link" href="inicio_sesion.php">Inicia Sesión </a></p>
 
 	</form>
 

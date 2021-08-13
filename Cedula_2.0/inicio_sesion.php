@@ -21,7 +21,10 @@
 			<label for="password">Contraseña:</label>
 			<input type="password" placeholder="Ingresar Contraseña">
 
-			<input type="submit" value="Entrar">
+			<!-- ACCEDER   -->
+			<!-- <input type="submit"  value="Entrar"> -->
+
+			<input type="button" value= "Entrar" class="button_active" onclick="location.href='index.php';" />
 
 			<a href="#"> ¿Olvidaste tu contraseña? </a><br>
 
@@ -31,3 +34,5 @@
 
 </body>
 </html>
+
+
