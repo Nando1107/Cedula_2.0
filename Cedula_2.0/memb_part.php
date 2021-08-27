@@ -1,3 +1,47 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN membresia_participacion D 
+  ON E.fk_id_membresia = D.id_membresia where id_profesor= 401';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['organismo_membresia'].'<td>
+    <tr>';
+    $organismo_membresia = $row['organismo_membresia']; 
+
+    echo ' <tr>
+    <td>'.$row['anos_membresia'].'<td>
+    <tr>';
+    $anos_membresia = $row['anos_membresia'];    
+    
+    echo ' <tr>
+    <td>'.$row['nivel_particip_membresia'].'<td>
+    <tr>';
+    $nivel_particip_membresia = $row['nivel_particip_membresia'];    
+  
+    }   
+	mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +88,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -63,11 +107,11 @@
               <div class="row form-group" id="edit-0">
                 <div class="col-md-8">
                   <label for="organismo" class="form-label">Organismo</label>
-                  <input type="text" class="form-control" id="organismo">
+                  <input type="text" class="form-control" id="organismo" value="<?php echo $organismo_membresia;?>">
                 </div>                
                 <div class="col-md-2">
                   <label for="años" class="form-label">Periodo (Años)</label>
-                  <input type="text" class="form-control" id="anos_">
+                  <input type="text" class="form-control" id="anos_" value="<?php echo $anos_membresia;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="nivel" class="form-label">Nivel de Participación</label>
@@ -77,6 +121,7 @@
                     <option>Suficiente</option>
                     <option>Regular</option>
                     <option>Poco</option>
+                    <option selected><?php echo $nivel_particip_membresia;?></option>
                   </select>
                 </div> 
                 <div class="col-md-12">

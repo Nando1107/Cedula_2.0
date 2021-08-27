@@ -1,3 +1,52 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN gestion_academica D 
+  ON E.fk_id_gestion = D.id_gestion where id_profesor= 401';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['actividad_puesto_gestion'].'<td>
+    <tr>';
+    $actividad_puesto_gestion = $row['actividad_puesto_gestion']; 
+
+    echo ' <tr>
+    <td>'.$row['inst_gestion'].'<td>
+    <tr>';
+    $inst_gestion = $row['inst_gestion'];    
+    
+    echo ' <tr>
+    <td>'.$row['mes_ano_inicio_gestion'].'<td>
+    <tr>';
+    $mes_ano_inicio_gestion = $row['mes_ano_inicio_gestion'];
+    
+    echo ' <tr>
+    <td>'.$row['mes_ano_fin_gestion'].'<td>
+    <tr>';
+    $mes_ano_fin_gestion = $row['mes_ano_fin_gestion'];
+      
+    }   
+	mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +93,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -63,19 +112,19 @@
               <div class="row form-group" id="edit-0">
                 <div class="col-md-4">
                   <label for="act_puesto" class="form-label">Actividad o Puesto</label>
-                  <input type="text" class="form-control" id="act_puesto">
+                  <input type="text" class="form-control" id="act_puesto" value="<?php echo $actividad_puesto_gestion;?>">
                 </div>
                 <div class="col-md-4">
                   <label for="inst_gest" class="form-label">Institución</label>
-                  <input type="text" class="form-control" id="inst_gest">
+                  <input type="text" class="form-control" id="inst_gest" value= "<?php echo $inst_gestion;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="inicio_de" class="form-label">De: (Mes y año)</label>
-                  <input type="month" name="fecha" id="inicio_de" class="form-control" value="yyyy-mm">                    
+                  <input type="month" name="fecha" id="inicio_de" class="form-control" value="<?php echo $mes_ano_inicio_gestion;?>">                    
                 </div>
                 <div class="col-md-2">
                   <label for="fin_de" class="form-label">A: (Mes y año)</label>
-                  <input type="month" name="fecha" id="fin_de" class="form-control" value="yyyy-mm">
+                  <input type="month" name="fecha" id="fin_de" class="form-control" value="<?php echo $mes_ano_fin_gestion;?>">
                 </div>
                 <div class="col-md-12">
                   <br>

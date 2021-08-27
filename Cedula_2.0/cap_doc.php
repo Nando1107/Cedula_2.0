@@ -1,3 +1,53 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN capacitacion_docente D 
+  ON E.fk_id_capacitacion = D.id_capacitacion where id_profesor= 401';    // Aquí debemos cambiar id_profesor = a una variable que salga del login
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['tipo_capacitacion'].'<td>
+    <tr>';
+    $tipo_capacitacion = $row['tipo_capacitacion']; 
+
+    echo ' <tr>
+    <td>'.$row['inst_pais_capacitacion'].'<td>
+    <tr>';
+    $inst_pais_capacitacion = $row['inst_pais_capacitacion'];    
+    
+    echo ' <tr>
+    <td>'.$row['ano_obt_capacitacion'].'<td>
+    <tr>';
+    $ano_obt_capacitacion = $row['ano_obt_capacitacion'];
+    
+    echo ' <tr>
+    <td>'.$row['horas_capacitacion'].'<td>
+    <tr>';
+    $horas_capacitacion = $row['horas_capacitacion'];
+
+     
+    }   
+	mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +94,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -62,19 +112,19 @@
               <div class="row form-group" id="edit-0">
                 <div class="col-md-4">
                   <label for="Tipo_cap" class="form-label">Tipo de Capacitación</label>
-                  <input type="text" class="form-control" id="tipo_capacitacion">
+                  <input type="text" class="form-control" id="tipo_capacitacion" value="<?php echo $tipo_capacitacion;?>">
                 </div>
                 <div class="col-md-4">
                   <label for="inst_pais_capacitacion" class="form-label">Institución y País</label>
-                  <input type="text" class="form-control" id="inst_pais_capacitacion">
+                  <input type="text" class="form-control" id="inst_pais_capacitacion" value="<?php echo $inst_pais_capacitacion;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="fecha_cap" class="form-label">Año de Obtención</label>
-                  <input type="int" class="form-control" id="fecha_cap">
+                  <input type="int" class="form-control" id="fecha_cap" value="<?php echo $ano_obt_capacitacion;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="horas" class="form-label">Horas</label>
-                  <input type="int" class="form-control" id="horas">
+                  <input type="int" class="form-control" id="horas" value="<?php echo $horas_capacitacion;?>">
                 </div>
                 <div class="col-md-12">
                   <br>

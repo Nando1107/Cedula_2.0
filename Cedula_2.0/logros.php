@@ -1,3 +1,37 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN logros_profesionales D 
+  ON E.fk_id_logros = D.id_logros where id_profesor= 401';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['descripcion_logros'].'<td>
+    <tr>';
+    $descripcion_logros = $row['descripcion_logros']; 
+    
+    }   
+	mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +78,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -61,7 +95,7 @@
           <div class="row">                
             <form class="row g-3">                  
               <label for="logros_prof" class="control-label">Descripción del logro</label>                   
-              <textarea name="comentarios" rows="5" id="logros_prof" cols="10"></textarea>             
+              <textarea name="comentarios" rows="5" id="logros_prof" cols="10"><?php echo $descripcion_logros;?></textarea>             
             </form>
           </div>
           <hr>

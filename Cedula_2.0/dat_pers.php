@@ -12,7 +12,7 @@
 	//echo "Connected successfully";
   $idn=1;
 
-  $sql= 'select * from datos_profesor where id_profesor= 2';
+  $sql= 'select * from datos_profesor where id_profesor= 401';
   $query = mysqli_query($conn,$sql);
   if(!$query)
   {
@@ -100,7 +100,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-lg">Cerrar Sesión</button>

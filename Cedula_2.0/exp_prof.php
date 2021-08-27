@@ -1,3 +1,52 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+  
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN experiencia_no_academica D 
+  ON E.fk_id_experiencia = D.id_experiencia where id_profesor= 401';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['actividad_puesto_exp'].'<td>
+    <tr>';
+    $actividad_puesto_exp = $row['actividad_puesto_exp'];
+
+    echo ' <tr>
+    <td>'.$row['organizacion_exp'].'<td>
+    <tr>';
+    $organizacion_exp = $row['organizacion_exp'];    
+    
+    echo ' <tr>
+    <td>'.$row['mes_ano_inicio_exp'].'<td>
+    <tr>';
+    $mes_ano_inicio_exp = $row['mes_ano_inicio_exp'];
+
+    echo ' <tr>
+    <td>'.$row['mes_ano_fin_exp'].'<td>
+    <tr>';
+    $mes_ano_fin_exp = $row['mes_ano_fin_exp'];
+
+    }   
+	mysqli_close($conn);
+?> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +93,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -63,19 +112,19 @@
               <div class="row form-group" id="edit-0">
                 <div class="col-md-4">
                   <label for="act_puesto" class="form-label">Actividad ó Puesto</label>
-                  <input type="text" class="form-control" id="act_puesto">
+                  <input type="text" class="form-control" id="act_puesto" value="<?php echo $actividad_puesto_exp;?>">
                 </div>
                 <div class="col-md-4">
                   <label for="organizacion_exp" class="form-label">Organización ó Empresa</label>
-                  <input type="text" class="form-control" id="organizacion_exp">
+                  <input type="text" class="form-control" id="organizacion_exp" value="<?php echo $organizacion_exp;?>" >
                 </div>
                 <div class="col-md-2">
                   <label for="inicio_de" class="form-label">De: (Mes y año)</label>
-                  <input type="month" name="fecha" id="inicio_de" class="form-control" value="yyyy-mm">                    
+                  <input type="month" name="fecha" id="inicio_de" class="form-control" value="<?php echo $mes_anio_inicio_exp_prof;?>">                    
                 </div>
                 <div class="col-md-2">
                   <label for="fin_de" class="form-label">A: (Mes y año)</label>
-                  <input type="month" name="fecha" id="fin_de" class="form-control" value="yyyy-mm">
+                  <input type="month" name="fecha" id="fin_de" class="form-control" value="<?php echo $mes_anio_fin_exp_prof;?>">
                 </div>
                 <div class="col-md-12">
                   <br>

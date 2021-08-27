@@ -1,3 +1,58 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN formacion_academica D 
+  ON E.fk_id_formacion = D.id_formacion where id_profesor= 401';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['nivel_formacion'].'<td>
+    <tr>';
+    $nivel_formacion = $row['nivel_formacion']; 
+
+    echo ' <tr>
+    <td>'.$row['nombre_especialidad'].'<td>
+    <tr>';
+    $nombre_especialidad = $row['nombre_especialidad'];    
+    
+    echo ' <tr>
+    <td>'.$row['inst_pais_formacion'].'<td>
+    <tr>';
+    $inst_pais_formacion = $row['inst_pais_formacion'];
+    
+    echo ' <tr>
+    <td>'.$row['ano_obt_formacion'].'<td>
+    <tr>';
+    $ano_obt_formacion = $row['ano_obt_formacion'];
+
+    echo ' <tr>
+    <td>'.$row['ced_prof'].'<td>
+    <tr>';
+    $ced_prof = $row['ced_prof'];
+
+    
+    }   
+	mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +99,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -73,23 +128,24 @@
                         <option>Maestría</option>
                         <option>Doctorado</option>
                         <option>Otro (Especificar)</option>
+                        <option selected><?php echo $nivel_formacion;?></option>    
                     </select>
                 </div>
                 <div class="col-md-4">
                   <label for="nombre_especialidad" class="form-label">Nombre (incluir especialidad)</label>
-                  <input type="text" class="form-control" id="nombre_especialidad">
+                  <input type="text" class="form-control" id="nombre_especialidad" value="<?php echo $nombre_especialidad;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="inst_pais_formacion" class="form-label">Institución y País</label>
-                  <input type="text" class="form-control" id="inst_pais_formacion">
+                  <input type="text" class="form-control" id="inst_pais_formacion" value= "<?php echo $inst_pais_formacion;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="ano_obt_formacion" class="form-label">Año de Obtención</label>
-                  <input type="int" class="form-control" id="ano_obt_formacion">
+                  <input type="int" class="form-control" id="ano_obt_formacion" value="<?php echo $ano_obt_formacion;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="ced_prof" class="form-label">Cédula Profesional</label>
-                  <input type="int" class="form-control" id="ced_prof">
+                  <input type="int" class="form-control" id="ced_prof" value="<?php echo $ced_prof;?>">
                 </div>
                 <div class="col-md-12">
                   <br>

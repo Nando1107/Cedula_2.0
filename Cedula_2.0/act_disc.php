@@ -1,3 +1,54 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN actualizacion_disciplinar D 
+  ON E.fk_id_actualizacion = D.id_actualizacion where id_profesor= 401';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['tipo_actualizacion'].'<td>
+    <tr>';
+    $tipo_actualizacion = $row['tipo_actualizacion']; 
+
+    echo ' <tr>
+    <td>'.$row['inst_pais_actualizacion'].'<td>
+    <tr>';
+    $inst_pais_actualizacion = $row['inst_pais_actualizacion'];    
+    
+    echo ' <tr>
+    <td>'.$row['ano_obt_actualizacion'].'<td>
+    <tr>';
+    $ano_obt_actualizacion = $row['ano_obt_actualizacion'];
+    
+    echo ' <tr>
+    <td>'.$row['horas_actualizacion'].'<td>
+    <tr>';
+    $horas_actualizacion = $row['horas_actualizacion'];
+
+     
+    }   
+	mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +95,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -60,19 +111,19 @@
               <div class="row form-group" id="edit-0">
                 <div class="col-md-4">
                   <label for="tipo_actualizacion" class="form-label">Tipo de Actualización</label>
-                  <input type="text" class="form-control" id="tipo_actualizacion">
+                  <input type="text" class="form-control" id="tipo_actualizacion" value="<?php echo $tipo_actualizacion;?>">
                 </div>
                 <div class="col-md-4">
                   <label for="inst_pais_actualizacion" class="form-label">Institución y País</label>
-                  <input type="text" class="form-control" id="inst_pais_actualizacion">
+                  <input type="text" class="form-control" id="inst_pais_actualizacion" value="<?php echo $inst_pais_actualizacion;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="fecha_actualizacion" class="form-label">Año de Obtención</label>
-                  <input type="int" class="form-control" id="fecha_actualizacion">
+                  <input type="int" class="form-control" id="fecha_actualizacion" value="<?php echo $ano_obt_actualizacion;?>">
                 </div>
                 <div class="col-md-2">
                   <label for="horas_actualizacion" class="form-label">Horas</label>
-                  <input type="int" class="form-control" id="horas_actualizacion">
+                  <input type="int" class="form-control" id="horas_actualizacion" value="<?php echo $horas_actualizacion;?>">
                 </div>
                 <div class="col-md-12">
                   <br>

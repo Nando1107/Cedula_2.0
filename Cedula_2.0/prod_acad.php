@@ -1,3 +1,43 @@
+<?php
+	$servername = "localhost";
+	$database = "cedula0";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $database);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+  $idn=1;
+
+  $sql= 'select * 
+  from datos_profesor E
+  JOIN productos_academicos D 
+  ON E.fk_id_prod_aca = D.id_productos where id_profesor= 401';
+  $query = mysqli_query($conn,$sql);
+  if(!$query)
+  {
+    die('error found'. mysqli_error($conn));
+  }
+ 
+  while($row = mysqli_fetch_array($query))  
+  {   
+    echo ' <tr>
+    <td>'.$row['numero_producto'].'<td>
+    <tr>';
+    $numero_producto = $row['numero_producto']; 
+
+    echo ' <tr>
+    <td>'.$row['descripcion_producto'].'<td>
+    <tr>';
+    $descripcion_producto = $row['descripcion_producto'];    
+    
+    
+    }   
+	mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,7 +84,7 @@
           <nav>
             <ul>
               <li><a href="index.php"></i>Inicio</a></li>
-              <li><a href="#"></i>Visualizar datos</a></li>
+              <li><a href="#"></i>Descargar </a></li>
             </ul>
             <div class="row-md-6">
               <button type="button" class="btn btn-outline-light btn-block btn-lg">Cerrar Sesión</button>
@@ -65,11 +105,11 @@
               <div class="row form-group" id="edit-0">
                 <div class="col-md-2">
                   <label for="numero_producto" class="form-label">Núm.</label>
-                  <input type="text" class="form-control" id="numero_producto">
+                  <input type="text" class="form-control" id="numero_producto" value="<?php echo $numero_producto;?>">
                 </div>
                 <div class="col-md-10">
                   <label for="descripcion_producto" class="form-label">Descripción del Producto Académico</label>
-                  <input type="text" class="form-control" id="descripcion_producto">
+                  <input type="text" class="form-control" id="descripcion_producto" value="<?php echo $descripcion_producto;?>">
                 </div>
                 <div class="col-md-12">
                   <br>
